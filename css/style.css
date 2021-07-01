@@ -8,10 +8,18 @@
 body{
     background-color: white;
 }
+
 header{
     width: 100%;
     height: 100px;
 }
+
+
+footer{
+    width: 100%;
+    height: 40px;
+}
+
 
 .margined{
     margin: 20px auto;
@@ -46,7 +54,6 @@ header{
 }
 
 .layout-height{
-    /* line-height: calc(100% - 100px); */
     height:450px;
 }
 
@@ -56,15 +63,30 @@ header{
 
 .center-column{
     width: 65%;
+
 }
 
-.display{
+.clearfix div:not(.layout-top){
     display: inline-block;
+}
+
+
+.display{
     float: left;
 }
 
-.clearfix{
+.right-column{
+    float: right;
+}
+
+.clearfix::after{
     content: "";
     clear: both;
     display: table;
+}
+
+.footer-content{
+    width:70%;
+    height: 100%;
+    background-color: rgb(94, 3, 168);
 }
